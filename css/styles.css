@@ -134,6 +134,7 @@ img {
   line-height: 1.14;
   letter-spacing: 0.02em;
   color: var(--primary-text-color);
+  transition: color 250ms;
 }
 
 .contacts-nav {
@@ -158,6 +159,7 @@ img {
   line-height: 1.14;
   letter-spacing: 0.02em;
   color: var(--title-text-color);
+  transition: color 250ms;
 }
 
 .mail-icon {
@@ -224,6 +226,7 @@ img {
   background-color: var(--accent-color);
   border-radius: 4px;
   padding: 10px 32px;
+  transition: color 250ms, background-color 250ms;
 }
 
 .hero .hero-button:hover,
@@ -388,11 +391,13 @@ img {
 
 .social-icon {
   fill: var(--social-icon-color);
+  transition: fill 250ms;
 }
 
 .social-link:hover,
 .social-link:focus {
   background-color: var(--accent-color);
+  transition: background-color 250ms;
 }
 
 .social-link:hover .social-icon,
@@ -437,6 +442,7 @@ img {
   fill: var(--social-icon-color);
   border: 1px solid #afb1b8;
   border-radius: 4px;
+  transition: fill 250ms, border 250ms;
 }
 
 .customers-link:hover,
@@ -480,6 +486,7 @@ img {
   line-height: 1.71;
   letter-spacing: 0.03em;
   color: var(--text-color-footer);
+  transition: color 250ms;
 }
 
 .footer-list .footer-address {
@@ -532,7 +539,8 @@ img {
   justify-content: center;
   align-items: center;
   border-radius: 50%;
-  background: rgba(255, 255, 255, 0.1);
+  background-color: rgba(255, 255, 255, 0.1);
+  transition: background-color 250ms;
 }
 
 .social-icon-footer {
