@@ -301,13 +301,8 @@ img {
   padding-bottom: 94px;
 }
 
-.work-main {
-  display: flex;
-  padding: 0;
-  gap: 30px;
-}
-
 .work-title {
+  display: block;
   font-weight: 700;
   font-size: 36px;
   line-height: 1.17;
@@ -316,8 +311,31 @@ img {
   text-align: center;
 }
 
-.work-img {
-  display: block;
+.work-main {
+  display: flex;
+  padding-left: 0;
+  gap: 30px;
+}
+
+.work-main .item {
+  position: relative;
+  max-width: 370px;
+  gap: 30px;
+}
+
+.work-img-name {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  padding: 27px;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  text-align: center;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: var(--text-color-white);
+  background: rgba(47, 48, 58, 0.8);
 }
 
 /* Team */
