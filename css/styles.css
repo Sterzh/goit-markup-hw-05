@@ -120,14 +120,11 @@ img {
   margin-left: 50px;
 }
 
-.site-nav .link,
-.site-nav .link-current {
+.site-nav-link {
+  /* position: relative */
   display: block;
   padding-top: 32px;
   padding-bottom: 32px;
-}
-
-.site-nav a {
   text-decoration: none;
   font-weight: 500;
   font-size: 14px;
@@ -137,6 +134,37 @@ img {
   transition-property: color;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.site-nav-link-current {
+  position: relative;
+  display: block;
+  padding-top: 32px;
+  padding-bottom: 32px;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.02em;
+  color: var(--accent-color);
+  transition-property: color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.site-nav-link:hover,
+.site-nav-link:focus {
+  color: var(--accent-color);
+}
+
+.site-nav-link-current::after {
+  position: absolute;
+  display: flex;
+  bottom: -2px;
+  width: 100%;
+  height: 4px;
+  background-color: currentColor;
+  content: '';
 }
 
 .contacts-nav {
@@ -175,13 +203,7 @@ img {
   margin-left: 50px;
 }
 
-.site-nav .link-current,
 .contacts-nav .link-current {
-  color: var(--accent-color);
-}
-
-.site-nav .link:hover,
-.site-nav .link:focus {
   color: var(--accent-color);
 }
 
@@ -509,7 +531,34 @@ img {
   margin-top: 20px;
 }
 
-.footer-list .link {
+.footer-list {
+  display: flex;
+  flex-direction: column;
+  padding-left: 0;
+}
+
+.footer-list .item + .item {
+  margin-top: 9px;
+}
+
+.footer-address {
+  text-decoration: none;
+  font-style: normal;
+  font-size: 14px;
+  line-height: 1.71;
+  letter-spacing: 0.03em;
+  color: var(--text-color-white);
+  transition-property: color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.footer-address:hover,
+.footer-address:focus {
+  color: var(--accent-color);
+}
+
+.footer-link {
   text-decoration: none;
   font-style: normal;
   font-size: 14px;
@@ -521,22 +570,8 @@ img {
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.footer-list .footer-address {
-  color: var(--text-color-white);
-}
-
-.footer-list {
-  display: flex;
-  flex-direction: column;
-  padding-left: 0;
-}
-
-.footer-list .item + .item {
-  margin-top: 9px;
-}
-
-.footer-list .link:hover,
-.footer-list .link:focus {
+.footer-link:hover,
+.footer-link:focus {
   color: var(--accent-color);
 }
 
