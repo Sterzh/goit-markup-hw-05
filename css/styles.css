@@ -134,7 +134,9 @@ img {
   line-height: 1.14;
   letter-spacing: 0.02em;
   color: var(--primary-text-color);
-  transition: color 250ms;
+  transition-property: color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .contacts-nav {
@@ -159,7 +161,9 @@ img {
   line-height: 1.14;
   letter-spacing: 0.02em;
   color: var(--title-text-color);
-  transition: color 250ms;
+  transition-property: color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .mail-icon {
@@ -226,7 +230,9 @@ img {
   background-color: var(--accent-color);
   border-radius: 4px;
   padding: 10px 32px;
-  transition: color 250ms, background-color 250ms;
+  transition-property: color, background-color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .hero .hero-button:hover,
@@ -391,13 +397,17 @@ img {
 
 .social-icon {
   fill: var(--social-icon-color);
-  transition: fill 250ms;
+  transition-property: fill;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .social-link:hover,
 .social-link:focus {
   background-color: var(--accent-color);
-  transition: background-color 250ms;
+  transition-property: background-color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .social-link:hover .social-icon,
@@ -442,7 +452,9 @@ img {
   fill: var(--social-icon-color);
   border: 1px solid #afb1b8;
   border-radius: 4px;
-  transition: fill 250ms, border 250ms;
+  transition-property: fill, border;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .customers-link:hover,
@@ -486,7 +498,9 @@ img {
   line-height: 1.71;
   letter-spacing: 0.03em;
   color: var(--text-color-footer);
-  transition: color 250ms;
+  transition-property: color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .footer-list .footer-address {
@@ -540,7 +554,9 @@ img {
   align-items: center;
   border-radius: 50%;
   background-color: rgba(255, 255, 255, 0.1);
-  transition: background-color 250ms;
+  transition-property: background-color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .social-icon-footer {
@@ -595,9 +611,14 @@ img {
   font-size: 16px;
   line-height: 1.63;
   letter-spacing: 0.03em;
-  background-color: var(--secondary-background-color);
   padding: 6px 22px;
   border-radius: 4px;
+  box-shadow: none;
+  color: var(--primary-text-color);
+  background-color: var(--secondary-background-color);
+  transition: box-shadow, color, background-color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .portfolio-button:hover,
@@ -622,6 +643,10 @@ img {
   margin-right: 30px;
   margin-bottom: 30px;
   border: 1px solid #eeeeee;
+  box-shadow: none;
+  transition-property: box-shadow;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .portfolio-link:hover,
