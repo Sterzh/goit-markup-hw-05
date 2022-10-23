@@ -1,8 +1,8 @@
 /* основной колір тексту #212121 */
 /* другорядний колір тексту #000000 */
-/* основной колір фону #FFFFFF */
-/* вторичный колір фону #F5F4FA */
-/* темный колір фона #2F303A */
+/* основний колір фону #FFFFFF */
+/* другорядний колір фону #F5F4FA */
+/* темный колір фону #2F303A */
 /* колір акцента #2196F3 */
 /* основной */
 
@@ -121,7 +121,6 @@ img {
 }
 
 .site-nav-link {
-  /* position: relative */
   display: block;
   padding-top: 32px;
   padding-bottom: 32px;
@@ -158,8 +157,8 @@ img {
 }
 
 .site-nav-link-current::after {
+  display: block;
   position: absolute;
-  display: flex;
   bottom: -2px;
   width: 100%;
   height: 4px;
@@ -729,4 +728,61 @@ img {
   line-height: 1.88;
   letter-spacing: 0.03em;
   color: var(--title-text-color);
+}
+
+/*modal*/
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  /* background-color: rgba(0, 0, 0, 0.2); */
+  background-color: red;
+  transition-property: background-color;
+  transition-duration: 3000ms;
+}
+
+.is-hidden {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  /* transition-property: opacity, visibility;
+  transition-duration: 3000ms; */
+}
+
+.modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 528px;
+  height: 581px;
+  background-color: var(--primary-background-color);
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+  transition-property: background-color, box-shadow;
+  transition-duration: 3000ms;
+}
+
+.modal-close-button {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  width: 30px;
+  height: 30px;
+  padding: 0;
+  border-radius: 50%;
+  background-color: var(--primary-background-color);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+}
+
+.modal-close-icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
