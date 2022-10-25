@@ -165,6 +165,7 @@ img {
   height: 4px;
   background-color: currentColor;
   content: '';
+  border-radius: 2px;
 }
 
 .contacts-nav {
@@ -250,6 +251,7 @@ img {
   letter-spacing: 0.06em;
   color: var(--text-color-white);
   background-color: var(--accent-color);
+  cursor: pointer;
   border-radius: 4px;
   padding: 10px 32px;
   transition-property: color, background-color;
@@ -433,6 +435,9 @@ img {
   justify-content: center;
   align-items: center;
   border-radius: 50%;
+  transition-property: background-color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .social-icon {
@@ -445,9 +450,6 @@ img {
 .social-link:hover,
 .social-link:focus {
   background-color: var(--accent-color);
-  transition-property: background-color;
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .social-link:hover .social-icon,
